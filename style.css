@@ -1,0 +1,434 @@
+
+html {
+  height: 100%;
+  width: 100%;
+}
+/*12 grid*/
+.layout{
+  border: 2px solid black;
+  display: grid;
+  grid:
+    "span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12" 1fr
+  "span6 span6 span6 span6 span6 span6. . . . . ." 1fr
+  ". . . . . span3 span3 span3 . . . ." 1fr
+  ". . . .span1 . . . . . . . " 1fr
+  / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  gap:5px;
+}
+.span12{grid-area: span12; background-color:#6383;} 
+.span6{grid-area: span6; background-color:#cc8fc733;} 
+.span3{grid-area: span3; background-color:#d992c933;} 
+.span1{grid-area: span1; background-color:#e7c1e033;} 
+
+/*3x3*/
+.layout2{
+   border: 2px solid black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(3,1fr);
+  gap:5px;
+}
+.x3{
+  background-color: #e8cfc5;
+  border: 2px solid #f0bcc4;
+}
+
+  /*Holy Grail*/
+.layout3{
+border: 2px solid black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid: 
+    "header header header" auto
+  "leftSide body rightSide" 1fr
+  "footer footer footer" auto
+  / auto 1fr auto;
+  gap:5px;
+}
+.header{grid-area: header; background-color:#f5ccea33;}
+.leftSide{grid-area: leftSide; background-color:#dbc6a933;}
+.rightSider{grid-area: rightSide; background-color:#ddd1ea33;}
+.body{grid-area: body; background-color:#bfd8f233;}
+.footer{grid-area: footer; background-color:#f5ccea33;}
+
+  /*sidebar*/
+ .layout4{
+   border: 2px solid black;
+   width: 99%;
+   height: 300px;
+   display: grid;
+   grid:
+     "sidebar body1" 1fr
+   / auto 1fr;
+   gap:5px;
+}
+.sidebar{grid-area: sidebar; background-color:#f5ccea33;}
+.body1{grid-area: body1; background-color:#dab8e033;}
+/*Header Main Footer*/
+.layout5{
+  border: 2px solid black;
+  width: 99%;  
+  height: 300px;
+  display: grid;
+  grid: 
+    "header1" auto
+  "main" 1fr
+  "footer1" auto
+  / 1fr;
+  gap: 5px;
+}
+.header1{grid-area: header1; background-color:#becaee33;}
+.main{grid-area: main; background-color:#c5ece833;}
+.footer1{grid-area: footer1; background-color:#acdcc833;}
+/*Infinite Rows*/
+.layout6{
+  border: 2px solid black;
+  width: 99%;
+  height:300px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+ grid-template-rows: repeat(auto-fit,1fr);
+gap:5px 
+}
+.box{
+  border: 1px soild black;
+  background-color: #e8cfc5;
+}
+  /*infinite rows with areas*/
+  .layout7{
+  border: 2px solid black;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(auto-fit,1fr);
+}
+ .col1Last1{
+   grid-column: 1/-1;
+  
+}
+    /*flexbox row*/
+    .layout8{
+      border: 2px solid #c06262;
+      background-color: #a8a8d7;
+      display: flex;
+      gap: 10px;
+  }
+  /*flexbox row wrap*/
+  .layout9{
+    width: 100%;
+    border: 2px solid black;
+    background-color: pink;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /*flexbox fill space*/
+  .layout10{
+    border: 2px solid #d7f2d4;
+    background-color: #e8b5d8;
+    display: flex;
+    gap: 10px;
+  }
+.grow1{
+  flex-grow: 1;
+}
+  /*flexbox fill remaning space*/
+  .layout11{
+    border: 2px solid #d7f2d4;
+      background-color: #e8b5d8;
+      display: flex;
+      gap: 10px;
+  }
+
+  /*flexbox separate*/
+  .layout12{
+    border: 2px solid #d7f2d4;
+    background-color: #e8b5d8;
+    display: flex;
+    gap: 10px;
+  }
+.marginLeft{
+  margin-left: auto;
+}
+  /*flexbox column wrap*/
+  .layout13{
+    width: 99%;
+    height:300px;
+  border:2px solid black;
+    background-color: #eeeca5;
+    display: flex;
+    gap:3px;
+ }
+/* 2d animation on the x and y axis*/
+#twoD{  
+  border:3px dashed #ffdbff;
+background-color: 
+  #db75c0;
+}
+/*Translate Method*/
+.trans:hover{
+  transform: translate(50px,100px);
+}
+/*Translate x method*/
+.transX:hover{
+  transform: translateX(50px);
+}
+/*Translate y method*/
+.transY:hover{
+  transform: translateY(100px);
+}
+/*rotate method*/
+#rotate:hover{
+  transform: rotate(20deg);
+}
+/*Rotate x method*/
+#rotateX:hover{
+  transform: rotateX(180deg);
+}
+/*Rotate y method*/
+#rotateY:hover{
+  transform: rotateY(180deg);
+}
+/*scale method*/
+#scale:hover{
+  transform: scale(2,3);
+}
+/*Scale x method*/
+#scaleX:hover{
+  transform: scaleX(2);
+}
+/*Scale y method*/
+#scaleY:hover{
+  transform: scaleY(3);
+}
+/*Skew method*/
+#skew:hover{
+  transform: skew(20deg,20deg);
+}
+/*Skew x method*/
+#skewX:hover{
+  transform: skew(20deg);
+}
+/*Skew y method*/
+#skewY:hover{
+  transform: skewY(20deg);
+}
+/*matrix method*/
+/*matrix(scaleX, skewY,SkewX,ScaleY,translateX,tanslateY)*/
+#matrix:hover{
+  transform: matrix(1,-0.3,0,1,0,0);
+}
+#matrix2:hover{
+  transform: matrix(2,4,-5,2,4,9);
+}
+#yourOwnone:hover{
+  transform: matrix(3,7,0.8,0.3,0,5);
+}
+/*3d animations x,y,z axis*/
+#threeD{
+  border:3px dashed #d1e5ff;
+  background-color:#cdccff
+}
+/*Translate 3d method*/
+#trans3d:hover{ /*translates 3d needs and x,y,and z*/
+  transform: translate3d(50px,10px,150px);
+}
+/*rotate 3d method*/
+#rotateZ:hover{
+  transform: rotateZ(90deg);
+}
+/*perspective method*/
+/*matrix 3d method*/
+
+
+
+
+/*transitions*/
+#transitions{
+  border:3px solid #e1ccf5;
+  background-color: 
+    #5483c0;
+}
+.box1{
+  width:50px;
+  height: 50px;
+  background-color: #dbfeff;
+  transition: width 2s, height 2s, background-color 2s;
+  border: 1px solid black;
+}
+/*transition*/
+#transition:hover{
+  width:100px;
+  height:100px;
+  background-color: #64ccce;
+}
+/*transition-delay*/
+#delay{
+  transition: width 2s;
+  transition-delay: 1s;
+}
+#delay:hover{
+  width:100px;
+}
+/*transition-duration*/
+#duration{
+  transition: background-color 2s;
+  transition-duration: 4s;
+}
+#duration:hover{
+  background-color: #fffcd6;
+}
+/*transition-property*/
+#property{
+  transition-property:width;
+}
+#property:hover{
+  width:100px;
+}
+/*transtion-timing-function*/
+#timing{
+  transition-timing-function: linear;
+}
+#timing:hover{
+  width: 100px;
+}
+
+/*animations*/
+#animations{
+  background-color: #9ab257;
+  border:3px solid #74c2c8;
+}
+/*CSS Animation background*/
+#animate{
+  animation-name: example;
+  animation-duration: 10s;
+}
+@keyframes example{
+  from{background-color: #e9c4e9;}
+  to{background-color: #90c18f;}
+}
+/*CSS Animation background and position*/
+#animate2{
+  animation-name:sample;
+  animation-duration: 10s;
+}
+@keyframes sample{
+  0%{background-color: #974997;}
+  25%{background-color: #510b51;}
+  50%{background-color: #ff9e9e;}
+  75%{background-color: #ff8a8a;}
+  100%{background-color: #ff7a7a;}
+}
+
+#animate3{
+  position: relative;
+  animation-name:allOver;
+  animation-duration: 20s;
+}
+@keyframes allOver{
+  0%{background-color: #974997; left: 0px;top: 0px;}
+  25%{background-color: #510b51; left:200px;top: 0px;}
+  50%{background-color: #ff9e9e; left:200px;top: 200px;}
+  75%{background-color: #ff8a8a;left:0px;top: 200px;}
+  100%{background-color: #ff7a7a;left:0px;top:0px;}
+}
+
+/*CSS Animation delay*/
+#animate4{
+  position: relative;
+  animation-name:allOver;
+  animation-duration: 20s;
+  animation-delay: 2s;
+}
+@keyframes allOver{
+  0%{background-color: #974997; left: 0px;top: 0px;}
+  25%{background-color: #510b51; left:200px;top: 0px;}
+  50%{background-color: #ff9e9e; left:200px;top: 200px;}
+  75%{background-color: #ff8a8a;left:0px;top: 200px;}
+  100%{background-color: #ff7a7a;left:0px;top:0px;}
+}
+
+/*CSS Animation repetitions*/
+#animate5{
+  position: relative;
+  animation-name:allOver;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+@keyframes allOver{
+  0%{background-color: #974997; left: 0px;top: 0px;}
+  25%{background-color: #510b51; left:200px;top: 0px;}
+  50%{background-color: #ff9e9e; left:200px;top: 200px;}
+  75%{background-color: #ff8a8a;left:0px;top: 200px;}
+  100%{background-color: #ff7a7a;left:0px;top:0px;}
+}
+
+/*CSS Animation reverse direction or alternate cycles*/
+#animate6{
+  position: relative;
+  animation-name:allOver;
+  animation-duration: 20s;
+  animation-direction: reverse;
+}
+@keyframes allOver{
+  0%{background-color: #e6b384; left: 0px;top: 0px;}
+  25%{background-color: #e990e9; left:200px;top: 0px;}
+  50%{background-color: #54604d; left:200px;top: 200px;}
+  75%{background-color: #8265ec;left:0px;top: 200px;}
+  100%{background-color: #ea8b8b;left:0px;top:0px;}
+}
+/*CSS Specify the Speed Curve of the Animation*/
+
+#animate7{
+  animation-name:mymove;
+  animation-duration: 20s;
+  position: relative;
+  animation: mymove 5s;
+  animation-fill-mode: forwards;
+}
+#div1{animation-timing-function: linear;}
+#div2{animation-timing-function: ease;}
+#div3{animation-timing-function: ease-in;}
+#div4{animation-timing-function: ease-out;}
+#div5{animation-timing-function: ease-in-out;}
+
+@keyframes mymove{
+  from{left: 0px;}
+  to{left: 300px;}
+}
+
+/*CSS Animation Specify the fill-mode*/
+#animate8{
+  animation-name:mymove1;
+  animation-duration: 20s;
+  position: relative;
+  animation: mymove 5s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+@keyframes mymove1{
+  from{top:0px;
+      background-color: #dca784;}
+  to{top:200px;}
+}
+
+#animate9{
+  position: relative;
+  animation-name:mymove2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes mymove2{
+  0%{background-color: #c75252; left: 0px;top: 0px;}
+  25%{background-color: #510b51; left:200px;top: 0px;}
+  50%{background-color: #53abee; left:200px;top: 200px;}
+  75%{background-color: #2e39d6;left:0px;top: 200px;}
+  100%{background-color: #69ddb1;left:0px;top:0px;}
+}
